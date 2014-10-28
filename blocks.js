@@ -2160,6 +2160,17 @@ BlockMorph.prototype.userMenu = function () {
         'userDestroy'
     );
     menu.addItem(
+        "recolor",
+        function () {
+            this.pickColor(
+                menu.title + '\ncolor:',
+                this.setColor,
+                this,
+                this.color
+            );
+        }
+    );
+    menu.addItem(
         "script pic...",
         function () {
             window.open(myself.topBlock().fullImage().toDataURL());
